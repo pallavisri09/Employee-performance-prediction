@@ -84,25 +84,9 @@ Data were analyzed by describing the features present in the data. the features 
 8.PerformanceRating
 
 
-### 2.Univariate, Bivariate & Multivariate Analysis:
-
- **Library Used**: Matplotlib & Seaborn
- **Plots Used**: Histplot, Lineplot, CountPlot, Barplot
-**Tip**: All Observation or insights written below the plots
-
-* Univariate Analysis: In univariate analysis we get the unique labels of categorical features, as well as get the range & density of numbers
-
-* Bivariate Analysis: In bivariate analysis we check the feature relationship with target veriable.
-
-* Multivariate Analysis: In multivariate Analysis check the relationship between two veriable with respect to the target veriable.
-
-#### **CONCLUSION**
-There are some features are positively correlated with performance rating( Target variable) [Emp Environment Satisfaction,Emp Last Salary Hike Percent,Emp Work Life Balance]
 
 
-## 3.Explotary Data Analysis
-**Basic Check & Statistical Measures***
-**Their is no constant column is present in Numerical as well as categoriacl data.**
+## 2.Explotary Data Analysis
 
 ### Distribution of Continuous Features:
 * In general, one of the first few steps in exploring the data would be to have a rough idea of how the features are distributed with one another. To do so, we shall invoke the familiar distplot function from the Seaborn plotting library. The distribution has been done by both numerical features. it will show the overall idea about the density and majority of data present in a different level.
@@ -113,22 +97,8 @@ The hourly rate range is 65 to 95 for majority employees work in this company.
 In General, Most of Employees work up to 5 years in this company. Most of the employees get 11% to 15% of salary hike in this company.
 
 
-## Check Skewness and Kurtosis of Numerical Features
-* Checking weather the data is Normally distributed or Not with Skewness and Kurtosis**
 
-### YearsSinceLastPromotion, This column is skewed
-
-1. skewness for YearsSinceLastPromotion: 1.9724620367914252
-2. kurtosis for YearsSinceLastPromotion: 3.5193552691799805
-
-* Distribution of Mean of Data
-1. Distribution of mean close to guassian distribution with mean value 9.5
-2. we can say that around 80% feature mean lies between 8.5 to 10.5
-
-* Distribution of Standard Deviation of Data
-1. Distribution of standard deviation of data also look like guassian distribution around 30% of feature standard deviation around the range of 3 3 to 20 and remaining 70% feature standard deviation in between 0 to 2
-
-## 4.Data Pre-Processing
+## 3.Data Pre-Processing
 1. Check Missing Value: Their is no missing value in data
 
 2. Categorical Data Conversion: Handel categorical data with the help of frequency and mannual encoding, because feature is contain lot's of labels
@@ -150,7 +120,7 @@ In General, Most of Employees work up to 5 years in this company. Most of the em
 * Standard Scaling: Standardization is the process of scaling the feature, it assumes the feature follow normal distribution and scale the feature between mean and standard deviation, here mean is 0 and standard deviation is always 1.
 
 
-## 5.Feature Selection
+## 4.Feature Selection
 
 1.  Drop unique and constant feature: Dropping employee number because this is a constant column as well as drop Years Since Last Promotion because we create a new feaure using square root transformation
 
@@ -166,13 +136,6 @@ Principal component analysis (PCA) is a popular technique for analyzing large da
 
 5. Saving Pre-Process Data: save the all preprocess data in new file and add target feature to it.
 
-## 6.Machine learning Model Creation & Evaluation
-1. Define Dependant and Independant Features:
-
-2. Balancing the data: The data is imbalance, so we need to balance the data with the help of SMOTE
-
-**SMOTE:** SMOTE (synthetic minority oversampling technique) is one of the most commonly used oversampling methods to solve the imbalance problem. It aims to balance class distribution by randomly increasing minority class examples by replicating them. SMOTE synthesises new minority instances between existing minority instances.
-3.Splitting Training And Testing Data: 80% data use for training & 20% data used for testing
 
 ## Algorithms:
 * AIM: Create a sweet spot model (Low bias, Low variance)
@@ -189,7 +152,7 @@ Principal component analysis (PCA) is a popular technique for analyzing large da
 So we are select Artifical neuranl network [Multilayer percepton] model.
 
 
-## 8.Saving Model
+## 5.Saving Model
 Save model with the helpof pickle file
 
 
